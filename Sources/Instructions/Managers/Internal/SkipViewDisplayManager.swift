@@ -154,12 +154,12 @@ class SkipViewDisplayManager {
     }
 
     func updateTopConstant(from original: CGFloat) -> CGFloat {
-#if !INSTRUCTIONS_APP_EXTENSIONS
-        if !UIApplication.shared.isStatusBarHidden {
-            return UIApplication.shared.statusBarFrame.size.height
-        }
-#endif
-
+        #warning("Uncomment if want to use app tooltips in app extension.")
+        //#if !INSTRUCTIONS_APP_EXTENSIONS
+        //        if !UIApplication.shared.isStatusBarHidden {
+        //            return UIApplication.shared.statusBarFrame.size.height
+        //        }
+        //#endif
         return original
     }
 }
